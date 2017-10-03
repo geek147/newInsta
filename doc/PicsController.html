@@ -317,7 +317,7 @@
       <pre class="code"><span class="info file"># File 'app/controllers/pics_controller.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
-    <span class='ivar'>@pic</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Pic.html" title="Pic (class)">Pic</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_pic_params'>pic_params</span><span class='rparen'>)</span>
+    <span class='ivar'>@pic</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_pics'>pics</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_pic_params'>pic_params</span><span class='rparen'>)</span>
 
     <span class='kw'>if</span> <span class='ivar'>@pic</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
       <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@pic</span><span class='comma'>,</span> <span class='label'>notice:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yes, the pics added</span><span class='tstring_end'>&quot;</span></span>
@@ -443,7 +443,7 @@
       <pre class="code"><span class="info file"># File 'app/controllers/pics_controller.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
-    <span class='ivar'>@pic</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Pic.html" title="Pic (class)">Pic</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@pic</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_pics'>pics</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -521,7 +521,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Oct  3 11:51:59 2017 by
+  Generated on Tue Oct  3 16:23:22 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.2).
 </div>
