@@ -7,7 +7,7 @@
   = csrf_meta_tags 
 
 %body
-  %nav.navbar.navbar-ers
+  %nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
     .container
       .navbar-brand= link_to "NewInsta", root_path
 
@@ -22,9 +22,9 @@
           %li= link_to "Join", new_user_registration_path
           %li= link_to "Log In", new_user_session_path
 
-    -flash.each do |name,msg|
-      = content_tag :div, msg, class:"alert alert-info"
+-flash.each do |name,msg|
+  = content_tag :div, msg, class:"alert alert-info"
 
-    = yield    
+= yield    
 
 
