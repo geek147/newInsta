@@ -37,11 +37,22 @@
   
     .navbar-brand {
       a {
-        color: #529ECC;
+        color: #ffffff;
         font-weight: bold;
         font-size: 1.6em;
         &:hover {
           text-decoration: none;
+        }
+      }
+    }
+
+    ul{
+      li{
+        a{
+          color:#ffffff;
+          &:hover {
+            color:#030303;
+          }
         }
       }
     }
